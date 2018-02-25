@@ -9,11 +9,11 @@ export class HiddenButtonComponent implements OnInit {
 
   showParagraphBoolean = true;
   index = 0;
-  timeStamps: number [] = [];
+  timeStamps: Date [] = [];
 
   showParagraph() {
     this.showParagraphBoolean = ! this.showParagraphBoolean;
-    this.timeStamps.push((new Date).getTime());
+    this.timeStamps.push((new Date));
     /*Was unable to parse event.Timestamp into a regular date.*/
   }
 
