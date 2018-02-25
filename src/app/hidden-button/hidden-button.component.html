@@ -1,0 +1,11 @@
+<button
+  class = "btn btn-primary"
+  (click)="showParagraph($event)">
+  Display Details
+</button>
+<p *ngIf="showParagraphBoolean">Secret Password == tuna</p>
+<p *ngFor="let time of timeStamps;let i = index;"
+  [ngStyle]="{backgroundColor: i > 3 ? 'blue':'white'}"
+  [ngClass]="{blueLogStatement:i > 3}">
+  Click logged at {{ time | date : 'medium' }}
+</p>
